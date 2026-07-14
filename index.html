@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeny Attendance - Absensi Digital</title>
+    
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #00b96b;
+            --primary-hover: #009656;
+            --dark-color: #111c31;
+            --light-bg: #f8fafc;
+            --text-muted: #6b7280;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fb;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #111;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand span {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-brand img {
+            border-radius: 8px;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 140px;
+            background: linear-gradient(135deg, #ffffff, #edf2ff);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--dark-color);
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .btn-download {
+            background: var(--dark-color);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: .3s ease-in-out;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(17, 28, 49, 0.2);
+        }
+
+        .btn-download:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 185, 107, 0.3);
+        }
+
+        .phone {
+            width: 100%;
+            max-width: 480px;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Stats Section */
+        .stats {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-stat {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.05);
+            background: white;
+            padding: 30px !important;
+            transition: .3s;
+        }
+
+        .card-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.1);
+        }
+
+        .card-stat h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .card-stat p {
+            margin: 0;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--light-bg);
+            padding: 100px 0;
+        }
+
+        .feature-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px;
+            height: 100%;
+            transition: .35s;
+            border: 1px solid #edf0f4;
+            box-shadow: 0 8px 25px rgba(0,0,0,.02);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0,0,0,.08);
+            border-color: var(--primary-color);
+        }
+
+        .feature-box .icon {
+            width: 60px;
+            height: 60px;
+            background: #e9fff4;
+            color: var(--primary-color);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .feature-box h5 {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark-color);
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .badge {
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            padding: 8px 16px !important;
+            border-radius: 50px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        .pricing-title h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--dark-color);
+        }
+
+        .pricing-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .card-pricing {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid #edf0f4;
+            box-shadow: 0 15px 40px rgba(0,0,0,.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-pricing.dark {
+            background: var(--dark-color);
+            color: white;
+            border: none;
+        }
+
+        .badge-pricing {
+            position: absolute;
+            top: -15px;
+            left: 35px;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .badge-basic {
+            background: var(--dark-color);
+            color: white;
+        }
+
+        .badge-popular {
+            background: #58D400;
+            color: #111;
+        }
+
+        .card-pricing h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .card-pricing hr {
+            margin: 25px 0;
+            opacity: 0.15;
+        }
+
+        .card-pricing h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .card-pricing ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .card-pricing li {
+            margin-bottom: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-pricing i {
+            color: #55D000;
+            font-size: 18px;
+        }
+
+        .price-box span {
+            font-size: 14px;
+            color: var(--text-muted);
+            display: block;
+        }
+        .card-pricing.dark .price-box span {
+            color: #a0aec0;
+        }
+
+        .price-box h4 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 5px 0 0 0;
+        }
+
+        .price-box small {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .card-pricing.dark .price-box small {
+            color: #a0aec0;
+        }
+
+        .btn-pricing {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px;
+            margin-top: 30px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-dark-custom {
+            background: var(--dark-color);
+            color: white;
+        }
+        .btn-dark-custom:hover {
+            background: #233554;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-green {
+            background: #58D400;
+            color: black;
+        }
+        .btn-green:hover {
+            background: #4bc200;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--light-bg);
+            padding: 100px 0;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.04);
+            border: 1px solid #edf0f4;
+        }
+
+        .about-card h2 {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .about-card .lead {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .about-item {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .about-item i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .about-item h5 {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark-color);
+        }
+
+        .about-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        .contact-card {
+            background: var(--light-bg);
+            max-width: 900px;
+            margin: auto;
+            padding: 50px;
+            border-radius: 24px;
+            border: 1px solid #edf0f4;
+        }
+
+        .contact-card h2 {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .contact-card h5 {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .contact-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: rgba(255,255,255,0.6);
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsive Breakpoints Fixes */
+        @media (max-width: 992px) {
+            .hero { padding: 60px 0 100px; text-align: center; }
+            .hero h1 { font-size: 38px; }
+            .hero img { margin-top: 50px; max-width: 380px; }
+            .stats { margin-top: -40px; }
+            .pricing-title h1 { font-size: 32px; }
+            .about-card { padding: 40px 25px; }
+        }
+
+        @media (max-width: 768px) {
+            .contact-card { padding: 30px 20px; }
+            .contact-card h2 { font-size: 26px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+                <span>Skeny Attendance</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-success mb-3">SISTEM ABSENSI PINTAR</span>
+                    <h1>Satu Smartphone, Gantikan Mesin Absen Lama Anda</h1>
+                    
+                    <p>
+                        Kelola kehadiran secara <strong>real-time</strong> dengan teknologi Face Recognition langsung dari satu perangkat. Tidak perlu lagi membeli mesin absensi mahal yang rumit.
+                    </p>
+
+                    <!-- Highlight Fitur Utama -->
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start mb-2">
+                            <i class="bi bi-phone-fill text-success me-3 fs-4"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">1 HP untuk Semua Karyawan</h6>
+                                <p class="text-muted small m-0">Cukup gunakan satu smartphone di lokasi untuk memproses absensi seluruh tim.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-cloud-slash-fill text-success me-3 fs-4"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Mode Offline Pintar</h6>
+                                <p class="text-muted small m-0">Internet terputus? Absensi tetap berjalan normal. Data otomatis tersinkronisasi saat online kembali.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted small mb-4">
+                        🚀 Solusi cepat, akurat, dan aman yang dirancang khusus untuk sekolah, kantor, pabrik, hingga instansi pemerintahan.
+                    </p>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-download">
+                        <i class="bi bi-google-play"></i> Unduh Sekarang
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/lanscape.png" class="phone" alt="Pratinjau Aplikasi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-stat text-center">
+                        <h2>10K+</h2>
+                        <p>Pengguna Aktif</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-stat text-center">
+                        <h2>500+</h2>
+                        <p>Perusahaan</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-stat text-center">
+                        <h2>99.9%</h2>
+                        <p>Akurasi Deteksi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-success mb-2">FITUR UTAMA</span>
+                <h2 class="fw-bold text-dark">Fitur Canggih untuk Absensi Modern</h2>
+                <p class="text-muted">Semua yang Anda butuhkan untuk mengelola kehadiran secara efisien, aman, dan cerdas.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">👥</div>
+                        <h5>Absensi Karyawan Tanpa Batas</h5>
+                        <p>Kelola data dan riwayat kehadiran seluruh karyawan tanpa ada batasan kuota.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">😊</div>
+                        <h5>Absensi Face Recognition</h5>
+                        <p>Verifikasi kehadiran yang aman dan akurat menggunakan teknologi pengenalan wajah berbasis AI.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">📡</div>
+                        <h5>Mode Absen Offline</h5>
+                        <p>Karyawan tetap bisa melakukan absen walau tanpa internet. Data otomatis tersinkronisasi saat terhubung.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">⏰</div>
+                        <h5>Manajemen Shift & Lembur</h5>
+                        <p>Atur jadwal kerja yang fleksibel, pembagian shift karyawan, dan pantau jam lembur dengan mudah.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">💰</div>
+                        <h5>Integrasi HRIS & Payroll</h5>
+                        <p>Hubungkan data absensi langsung ke sistem HR dan penggajian untuk kalkulasi gaji otomatis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">🔗</div>
+                        <h5>REST API & Webhook</h5>
+                        <p>Kemudahan integrasi data dengan aplikasi pihak ketiga maupun sistem internal bisnis Anda.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">🏢</div>
+                        <h5>Manajemen Multi-Cabang</h5>
+                        <p>Pantau kehadiran karyawan di berbagai kantor atau cabang yang berbeda dari satu dashboard tunggal.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">💾</div>
+                        <h5>Backup & Restore</h5>
+                        <p>Amankan data absensi berharga Anda dengan pencadangan otomatis dan pemulihan sekali klik.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">✔</div>
+                        <h5>Alur Kerja Persetujuan</h5>
+                        <p>Proses pengajuan cuti, izin, dan koreksi absensi menjadi lebih terstruktur melalui alur persetujuan resmi.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">📈</div>
+                        <h5>Analitik Lanjutan</h5>
+                        <p>Dapatkan insight mendalam lewat laporan kehadiran, tren produktivitas, dan analitik performa kerja.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">📄</div>
+                        <h5>Laporan Excel & PDF</h5>
+                        <p>Ekspor data absensi dengan format profesional ke Excel, PDF, atau format kustom lainnya kapan saja.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">🛡</div>
+                        <h5>Anti-Spoof & Liveness Detection</h5>
+                        <p>Cegah kecurangan atau manipulasi absen menggunakan teknologi deteksi wajah asli secara langsung.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="feature-box">
+                        <div class="icon">🎧</div>
+                        <h5>Dukungan Prioritas</h5>
+                        <p>Layanan pelanggan khusus dengan respon lebih cepat untuk memastikan operasional bisnis berjalan lancar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harga Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="badge bg-success mb-2">PAKET HARGA</span>
+                <div class="pricing-title">
+                    <h1>Paket Skeny Attendance</h1>
+                </div>
+            </div>
+
+            <div class="pricing-wrapper">
+                <!-- Bulanan -->
+                <div class="card-pricing">
+                    <div>
+                        <div class="badge-pricing badge-basic">Basic</div>
+                        <h2>Paket Bulanan</h2>
+                        <hr>
+                        <h3>Layanan Termasuk:</h3>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Absensi Karyawan Tanpa Batas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition AI</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Manajemen Shift Kerja</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Integrasi API Standar</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Ekspor Laporan Excel & PDF</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span>Harga</span>
+                            <h4>Rp74.000 <small>/ bulan</small></h4>
+                        </div>
+                        <a href="#" class="btn-pricing btn-dark-custom">Mulai Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Tahunan -->
+                <div class="card-pricing dark">
+                    <div>
+                        <div class="badge-pricing badge-popular">Paling Populer ⭐</div>
+                        <h2>Paket Tahunan</h2>
+                        <hr>
+                        <h3>Layanan Termasuk:</h3>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Semua Fitur Paket Bulanan</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan Prioritas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Laporan Performa Dua Mingguan</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Uji Coba Gratis 3 Hari</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span>Harga</span>
+                            <h4>Rp289.000 <small>/ tahun</small></h4>
+                        </div>
+                        <a href="#" class="btn-pricing btn-green">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-card">
+                <div class="text-center mb-4">
+                    <span class="badge bg-success mb-2">TENTANG KAMI</span>
+                    <h2 class="fw-bold">Absensi Lebih Cerdas dengan Teknologi AI</h2>
+                </div>
+                <p class="lead text-muted text-center max-width-700 mx-auto mb-5">
+                    Skeny Attendance adalah solusi manajemen kehadiran kerja cerdas yang dirancang untuk membantu bisnis mengelola absensi karyawan lebih cepat, akurat, dan aman menggunakan Face Recognition bertenaga AI.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="about-item">
+                            <i class="bi bi-person-check-fill"></i>
+                            <h5>Absensi Akurat</h5>
+                            <p>Fitur Face Recognition dengan Anti-Spoofing mencegah kecurangan manipulasi foto/absen palsu.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="about-item">
+                            <i class="bi bi-cloud-check-fill"></i>
+                            <h5>Cloud & Offline</h5>
+                            <p>Karyawan tetap bisa absen meski tanpa koneksi internet. Data disinkronkan otomatis saat online kembali.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="about-item">
+                            <i class="bi bi-building-fill"></i>
+                            <h5>Dirancang untuk Bisnis</h5>
+                            <p>Sangat cocok untuk kebutuhan kantor, pabrik, sekolah, toko retail, hingga instansi pemerintahan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5">
+                <p class="text-center text-muted mb-0">
+                    <strong>Skeny Attendance</strong> memadukan teknologi kecerdasan buatan, sinkronisasi cloud, manajemen shift, integrasi payroll, pelaporan data, serta analitik kehadiran ke dalam satu platform modern.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="fw-bold mb-4 text-center">Hubungi Kami</h2>
+                <p class="mb-5 text-center">
+                    Punya pertanyaan seputar Skeny Attendance atau butuh bantuan teknis terkait akun Anda? Tim kami siap membantu.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <h5><i class="bi bi-envelope-fill text-success me-2"></i> Email</h5>
+                            <p class="ps-4">skenystudio@gmail.com</p>
+                        </div>
+                        <div>
+                            <h5><i class="bi bi-clock-fill text-success me-2"></i> Jam Operasional</h5>
+                            <p class="ps-4 mb-1">Senin – Jumat</p>
+                            <p class="ps-4">08:00 AM – 05:00 PM (WIB / GMT+7)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="bi bi-headset text-success me-2"></i> Layanan Bantuan</h5>
+                        <p class="ps-4">
+                            Untuk info produk, bantuan teknis, peluang kemitraan, atau pertanyaan seputar tagihan paket, silakan hubungi kami via email. Kami akan merespon pesan Anda secepat mungkin pada jam kerja.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            Hak Cipta © 2026 Skeny Attendance. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
