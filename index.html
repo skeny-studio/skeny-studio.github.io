@@ -60,8 +60,8 @@
         }
 
         /* Hero Section */
-        .hero {
-            padding: 100px 0 140px;
+       .hero {
+            padding: 100px 0 50px; /* Diubah dari 140px menjadi 50px agar lebih rapat ke bawah */
             background: linear-gradient(135deg, #ffffff, #edf2ff);
             position: relative;
         }
@@ -114,11 +114,18 @@
             50% { transform: translateY(-15px); }
         }
 
-        /* Stats Section */
-        .stats {
-            margin-top: -60px;
+        .video-tutorial {
+            background: linear-gradient(180deg, #edf2ff, #f5f7fb);
+            padding: 30px 0 60px 0; /* Padding atas dibuat tipis (30px) agar dekat dengan Hero */
             position: relative;
-            z-index: 10;
+            z-index: 11;
+        }
+
+        /* Statistik Section (Sesuaikan agar tidak terlalu menabrak video) */
+        .stats {
+            margin-top: -30px; /* Dikurangi dari -60px agar pas menimpa batas bawah video section */
+            position: relative;
+            z-index: 12;
         }
 
         .card-stat {
@@ -531,6 +538,28 @@
             </div>
         </div>
     </section>
+        <!-- Video Section -->
+    <section class="video-tutorial py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-success mb-2">DEMO APLIKASI</span>
+                    <h2 class="fw-bold text-dark mb-4">Cara Kerja Skeny Attendance</h2>
+                    
+                    <div class="video-wrapper shadow-lg rounded-4 overflow-hidden bg-black">
+                        <video controls poster="images/lanscape.png" class="w-100 d-block">
+                            <source src="video/tutorial.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video. Silakan unduh video melalui link yang tersedia.
+                        </video>
+                    </div>
+                    
+                    <p class="text-muted small mt-3 mb-0">
+                        *Tonton video singkat di atas untuk melihat proses absensi wajah dalam hitungan detik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Statistik Section -->
     <section class="stats">
@@ -709,7 +738,7 @@
                             <li><i class="bi bi-check-circle-fill"></i> Semua Fitur Paket Bulanan</li>
                             <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan Prioritas</li>
                             <li><i class="bi bi-check-circle-fill"></i> Laporan Performa Dua Mingguan</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Uji Coba Gratis 14 Hari</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Uji Coba Gratis 3 Hari</li>
                         </ul>
                     </div>
                     <div>
