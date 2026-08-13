@@ -61,7 +61,7 @@
 
         /* Hero Section */
        .hero {
-            padding: 100px 0 50px; /* Diubah dari 140px menjadi 50px agar lebih rapat ke bawah */
+            padding: 100px 0 50px;
             background: linear-gradient(135deg, #ffffff, #edf2ff);
             position: relative;
         }
@@ -116,14 +116,14 @@
 
         .video-tutorial {
             background: linear-gradient(180deg, #edf2ff, #f5f7fb);
-            padding: 30px 0 60px 0; /* Padding atas dibuat tipis (30px) agar dekat dengan Hero */
+            padding: 30px 0 60px 0;
             position: relative;
             z-index: 11;
         }
 
-        /* Statistik Section (Sesuaikan agar tidak terlalu menabrak video) */
+        /* Statistik Section */
         .stats {
-            margin-top: -30px; /* Dikurangi dari -60px agar pas menimpa batas bawah video section */
+            margin-top: -30px;
             position: relative;
             z-index: 12;
         }
@@ -331,38 +331,6 @@
             color: #a0aec0;
         }
 
-        .btn-pricing {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            padding: 14px;
-            margin-top: 30px;
-            border-radius: 14px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: .3s;
-        }
-
-        .btn-dark-custom {
-            background: var(--dark-color);
-            color: white;
-        }
-        .btn-dark-custom:hover {
-            background: #233554;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .btn-green {
-            background: #58D400;
-            color: black;
-        }
-        .btn-green:hover {
-            background: #4bc200;
-            color: black;
-            transform: translateY(-3px);
-        }
-
         /* About Section */
         .about-section {
             background: var(--light-bg);
@@ -499,11 +467,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <span class="badge bg-success mb-3">SISTEM ABSENSI PINTAR</span>
-                    <h1>Satu Smartphone, Gantikan Mesin Absen Lama Anda</h1>
+                    <span class="badge bg-success mb-3">SISTEM ABSENSI & PAYROLL PINTAR</span>
+                    <h1>Satu Smartphone, Gantikan Mesin Absen & Kalkulasi Gaji Otomatis</h1>
                     
                     <p>
-                        Kelola kehadiran secara <strong>real-time</strong> dengan teknologi Face Recognition langsung dari satu perangkat. Tidak perlu lagi membeli mesin absensi mahal yang rumit.
+                        Kelola kehadiran, hitung jam <strong>lembur</strong>, hingga integrasikan data ke sistem <strong>payroll</strong> secara <strong>real-time</strong> langsung dari satu perangkat.
                     </p>
 
                     <!-- Highlight Fitur Utama -->
@@ -515,17 +483,24 @@
                                 <p class="text-muted small m-0">Cukup gunakan satu smartphone di lokasi untuk memproses absensi seluruh tim.</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="bi bi-cloud-slash-fill text-success me-3 fs-4"></i>
+                        <div class="d-flex align-items-start mb-2">
+                            <i class="bi bi-clock-history text-success me-3 fs-4"></i>
                             <div>
-                                <h6 class="fw-bold mb-1">Mode Offline Pintar</h6>
-                                <p class="text-muted small m-0">Internet terputus? Absensi tetap berjalan normal. Data otomatis tersinkronisasi saat online kembali.</p>
+                                <h6 class="fw-bold mb-1">Manajemen Lembur Otomatis</h6>
+                                <p class="text-muted small m-0">Catat dan hitung durasi jam lembur karyawan secara akurat tanpa kalkulasi manual.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-cash-stack text-success me-3 fs-4"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Integrasi Payroll & Penggajian</h6>
+                                <p class="text-muted small m-0">Sinkronisasi data kehadiran dan lembur secara langsung untuk perhitungan gaji yang cepat.</p>
                             </div>
                         </div>
                     </div>
                     
                     <p class="text-muted small mb-4">
-                        🚀 Solusi cepat, akurat, dan aman yang dirancang khusus untuk sekolah, kantor, pabrik, hingga instansi pemerintahan.
+                        🚀 Solusi lengkap absensi, lembur, dan payroll untuk sekolah, kantor, pabrik, hingga instansi pemerintahan.
                     </p>
 
                     <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-download">
@@ -538,7 +513,8 @@
             </div>
         </div>
     </section>
-        <!-- Video Section -->
+
+    <!-- Video Section -->
     <section class="video-tutorial py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -554,7 +530,7 @@
                     </div>
                     
                     <p class="text-muted small mt-3 mb-0">
-                        *Tonton video singkat di atas untuk melihat proses absensi wajah dalam hitungan detik.
+                        *Tonton video singkat di atas untuk melihat proses absensi wajah, perhitungan lembur, dan sinkronisasi data.
                     </p>
                 </div>
             </div>
@@ -592,8 +568,8 @@
         <div class="container">
             <div class="text-center mb-5">
                 <span class="badge bg-success mb-2">FITUR UTAMA</span>
-                <h2 class="fw-bold text-dark">Fitur Canggih untuk Absensi Modern</h2>
-                <p class="text-muted">Semua yang Anda butuhkan untuk mengelola kehadiran secara efisien, aman, dan cerdas.</p>
+                <h2 class="fw-bold text-dark">Fitur Canggih untuk Absensi, Lembur & Payroll</h2>
+                <p class="text-muted">Semua yang Anda butuhkan untuk mengelola kehadiran, lembur, dan penggajian secara efisien.</p>
             </div>
 
             <div class="row g-4">
@@ -622,14 +598,14 @@
                     <div class="feature-box">
                         <div class="icon">⏰</div>
                         <h5>Manajemen Shift & Lembur</h5>
-                        <p>Atur jadwal kerja yang fleksibel, pembagian shift karyawan, dan pantau jam lembur dengan mudah.</p>
+                        <p>Atur jadwal kerja fleksibel, pembagian shift, serta rekapitulasi jam lembur secara otomatis.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-box">
                         <div class="icon">💰</div>
                         <h5>Integrasi HRIS & Payroll</h5>
-                        <p>Hubungkan data absensi langsung ke sistem HR dan penggajian untuk kalkulasi gaji otomatis.</p>
+                        <p>Hubungkan data absensi dan lembur langsung ke sistem penggajian untuk kalkulasi gaji otomatis.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -671,7 +647,7 @@
                     <div class="feature-box">
                         <div class="icon">📄</div>
                         <h5>Laporan Excel & PDF</h5>
-                        <p>Ekspor data absensi dengan format profesional ke Excel, PDF, atau format kustom lainnya kapan saja.</p>
+                        <p>Ekspor data absensi, lembur, dan payroll dengan format profesional ke Excel atau PDF kapan saja.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -679,13 +655,6 @@
                         <div class="icon">🛡</div>
                         <h5>Anti-Spoof & Liveness Detection</h5>
                         <p>Cegah kecurangan atau manipulasi absen menggunakan teknologi deteksi wajah asli secara langsung.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mx-auto">
-                    <div class="feature-box">
-                        <div class="icon">🎧</div>
-                        <h5>Dukungan Prioritas</h5>
-                        <p>Layanan pelanggan khusus dengan respon lebih cepat untuk memastikan operasional bisnis berjalan lancar.</p>
                     </div>
                 </div>
             </div>
@@ -712,9 +681,9 @@
                         <h3>Layanan Termasuk:</h3>
                         <ul>
                             <li><i class="bi bi-check-circle-fill"></i> Absensi Karyawan Tanpa Batas</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Manajemen Shift Kerja</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Integrasi API Standar</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition & Anti-Spoof</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Manajemen Shift & Lembur</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Integrasi Data & Payroll</li>
                             <li><i class="bi bi-check-circle-fill"></i> Ekspor Laporan Excel & PDF</li>
                             <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan</li>
                         </ul>
@@ -736,6 +705,7 @@
                         <h3>Layanan Termasuk:</h3>
                         <ul>
                             <li><i class="bi bi-check-circle-fill"></i> Semua Fitur Paket Bulanan</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Kalkulasi Lembur & Payroll Otomatis</li>
                             <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan Prioritas</li>
                             <li><i class="bi bi-check-circle-fill"></i> Laporan Performa Dua Mingguan</li>
                             <li><i class="bi bi-check-circle-fill"></i> Uji Coba Gratis 3 Hari</li>
@@ -748,9 +718,6 @@
                         </div>
                     </div>
                 </div>
-
-              
-
             </div>
 
              <div class="text-center mt-4">
@@ -758,9 +725,7 @@
                     <i class="bi bi-google-play"></i> Unduh Sekarang
                 </a>
             </div>
-
         </div>
-         
     </section>
 
     <!-- Tentang Kami Section -->
@@ -769,10 +734,10 @@
             <div class="about-card">
                 <div class="text-center mb-4">
                     <span class="badge bg-success mb-2">TENTANG KAMI</span>
-                    <h2 class="fw-bold">Absensi Lebih Cerdas dengan Teknologi</h2>
+                    <h2 class="fw-bold">Absensi, Lembur & Payroll Lebih Cerdas dengan Teknologi</h2>
                 </div>
                 <p class="lead text-muted text-center max-width-700 mx-auto mb-5">
-                    Skeny Attendance adalah sistem pengelolaan kehadiran kerja digital yang dirancang untuk membantu perusahaan mencatat dan memantau absensi karyawan secara cepat, akurat, dan aman. Sistem ini memanfaatkan teknologi pemindaian dan pengenalan wajah (Face Recognition) untuk memverifikasi identitas karyawan secara otomatis.
+                    Skeny Attendance adalah sistem pengelolaan kehadiran kerja digital yang dirancang untuk membantu perusahaan mencatat dan memantau absensi, mengelola jam lembur, serta menyederhanakan perhitungan payroll secara cepat, akurat, dan aman.
                 </p>
 
                 <div class="row g-4">
@@ -785,23 +750,23 @@
                     </div>
                     <div class="col-md-4">
                         <div class="about-item">
-                            <i class="bi bi-cloud-check-fill"></i>
-                            <h5>Cloud & Offline</h5>
-                            <p>Karyawan tetap bisa absen meski tanpa koneksi internet. Data disinkronkan otomatis saat online kembali.</p>
+                            <i class="bi bi-clock-fill"></i>
+                            <h5>Manajemen Lembur</h5>
+                            <p>Pencatatan dan rekapitulasi jam lembur karyawan secara otomatis terhubung ke sistem rekap.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="about-item">
-                            <i class="bi bi-building-fill"></i>
-                            <h5>Dirancang untuk Bisnis</h5>
-                            <p>Sangat cocok untuk kebutuhan kantor, pabrik, sekolah, toko retail, hingga instansi pemerintahan.</p>
+                            <i class="bi bi-cash-coin"></i>
+                            <h5>Integrasi Payroll</h5>
+                            <p>Mempermudah kalkulasi gaji bulanan berdasarkan data kehadiran dan lembur yang akurat.</p>
                         </div>
                     </div>
                 </div>
 
                 <hr class="my-5">
                 <p class="text-center text-muted mb-0">
-                    <strong>Skeny Attendance</strong> memadukan teknologi kecerdasan buatan, sinkronisasi cloud, manajemen shift, integrasi payroll, pelaporan data, serta analitik kehadiran ke dalam satu platform modern.
+                    <strong>Skeny Attendance</strong> memadukan teknologi kecerdasan buatan, sinkronisasi cloud, manajemen shift, kalkulasi lembur, integrasi payroll, pelaporan data, serta analitik kehadiran ke dalam satu platform modern.
                 </p>
             </div>
         </div>
@@ -813,7 +778,7 @@
             <div class="contact-card">
                 <h2 class="fw-bold mb-4 text-center">Hubungi Kami</h2>
                 <p class="mb-5 text-center">
-                    Punya pertanyaan seputar Skeny Attendance atau butuh bantuan teknis terkait akun Anda? Tim kami siap membantu.
+                    Punya pertanyaan seputar fitur lembur, integrasi payroll Skeny Attendance, atau butuh bantuan teknis terkait akun Anda? Tim kami siap membantu.
                 </p>
 
                 <div class="row g-4">
@@ -831,7 +796,7 @@
                     <div class="col-md-6">
                         <h5><i class="bi bi-headset text-success me-2"></i> Layanan Bantuan</h5>
                         <p class="ps-4">
-                            Untuk info produk, bantuan teknis, peluang kemitraan, atau pertanyaan seputar tagihan paket, silakan hubungi kami via email. Kami akan merespon pesan Anda secepat mungkin pada jam kerja.
+                            Untuk info produk, bantuan teknis lembur dan payroll, peluang kemitraan, atau pertanyaan seputar tagihan paket, silakan hubungi kami via email. Kami akan merespon pesan Anda secepat mungkin pada jam kerja.
                         </p>
                     </div>
                 </div>
