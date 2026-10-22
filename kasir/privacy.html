@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi – Kasir100</title>
+<meta name="description" content="Kebijakan privasi aplikasi kasir gratis yang menampilkan iklan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F8; --card:#FFFFFF; --ink:#1B2430; --muted:#5A6676; --line:#D5DBE1;
+  --accent:#0F766E; --accent-soft:#DDF3EF; --ad:#FFF1CC; --ad-ink:#6B4A00; --ph:#FDE2E2; --ph-ink:#8A1C1C;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12171D; --card:#1A2129; --ink:#E7ECF1; --muted:#9AA7B5; --line:#2E3946;
+    --accent:#4FD1C0; --accent-soft:#17332F; --ad:#3A2E10; --ad-ink:#F5D98A; --ph:#4A2424; --ph-ink:#FFB4B4;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 16px/1.7 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);
+}
+main{max-width:720px; margin:0 auto; padding:40px 20px 64px}
+h1{font-size:clamp(1.7rem,5vw,2.3rem); line-height:1.2; margin:0 0 8px; font-weight:600}
+h2{font-size:1.2rem; margin:40px 0 8px; font-weight:600}
+h3{font-size:1rem; margin:20px 0 4px; font-weight:600}
+p,ul{margin:8px 0}
+ul{padding-left:1.2rem}
+li{margin:4px 0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.meta{color:var(--muted); margin:0 0 28px}
+.ph{background:var(--ph); color:var(--ph-ink); padding:0 4px; border-radius:3px}
+
+/* Ringkasan bergaya struk */
+.receipt{
+  background:var(--card); border:1px solid var(--line); border-radius:6px;
+  padding:20px 22px; margin:24px 0 8px; font-variant-numeric:tabular-nums;
+}
+.receipt h2{margin:0 0 12px; font-size:1.05rem; text-align:center}
+.receipt .row{
+  display:flex; justify-content:space-between; gap:16px;
+  padding:9px 0; border-top:1px dashed var(--line);
+}
+.receipt .row span:first-child{color:var(--muted)}
+.receipt .row span:last-child{font-weight:500; text-align:right}
+.receipt .yes{color:var(--accent)}
+
+.ads{
+  background:var(--ad); color:var(--ad-ink); border-radius:6px;
+  padding:14px 16px; margin:16px 0;
+}
+.ads strong{font-weight:600}
+.note{border-left:3px solid var(--accent); background:var(--accent-soft); padding:10px 14px; border-radius:0 6px 6px 0; margin:16px 0}
+
+table{border-collapse:collapse; width:100%; font-size:.95rem}
+.scroll{overflow-x:auto}
+th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-weight:600}
+footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Kebijakan Privasi</h1>
+  <p class="meta">Kasir100 oleh <span class="ph">Skeny Studio</span> · Terakhir diperbarui: 22 Oktober 2026</p>
+
+  <p>Kasir100 adalah aplikasi kasir yang bisa dipakai gratis dan didukung iklan. Halaman ini menjelaskan data apa yang diproses, untuk apa, dan pilihan yang Anda miliki. Dengan memakai aplikasi, Anda menyetujui kebijakan ini.</p>
+
+  <section class="receipt" aria-label="Ringkasan">
+    <h2>Ringkasan singkat</h2>
+    <div class="row"><span>Data produk, stok, dan transaksi</span><span>Disimpan di perangkat Anda</span></div>
+    <div class="row"><span>Biaya aplikasi</span><span>Gratis</span></div>
+    <div class="row"><span>Menampilkan iklan</span><span class="yes">Ya (Google AdMob)</span></div>
+    <div class="row"><span>Data toko dikirim ke jaringan iklan</span><span>Tidak</span></div>
+    <div class="row"><span>Data Anda dijual</span><span>Tidak</span></div>
+  </section>
+
+  <h2>1. Data yang Anda masukkan</h2>
+  <p>Saat memakai aplikasi, Anda dapat memasukkan data usaha seperti nama toko, daftar produk dan harga, stok, transaksi penjualan, data pelanggan, serta pengaturan struk dan printer.</p>
+  <ul>
+    <li>Data ini disimpan di database lokal pada perangkat Anda.</li>
+    <li>Kami tidak membaca atau menyalin data tersebut ke server kami, kecuali Anda mengaktifkan fitur yang memerlukannya <span class="ph">[sesuaikan: mis. sinkronisasi atau cadangan online, atau hapus bagian ini jika tidak ada]</span>.</li>
+    <li>Fitur ekspor (Excel atau PDF) membuat file di perangkat Anda. Ke mana file itu dibagikan sepenuhnya Anda yang menentukan.</li>
+  </ul>
+
+  <h2>2. Iklan dan data yang dikumpulkan otomatis</h2>
+  <div class="ads"><strong>Aplikasi ini menampilkan iklan.</strong> Iklan disediakan oleh Google AdMob. Iklan ditampilkan di luar data toko Anda dan tidak dibuat dari isi transaksi atau daftar produk Anda.</div>
+  <p>Agar iklan dapat ditampilkan, diukur, dan dicegah dari penyalahgunaan, Google AdMob dan mitranya dapat mengumpulkan data dari perangkat Anda, antara lain:</p>
+  <ul>
+    <li>ID iklan (Advertising ID) dan pengenal perangkat serupa;</li>
+    <li>alamat IP dan perkiraan lokasi dari IP;</li>
+    <li>jenis perangkat, versi sistem operasi, bahasa, dan operator seluler;</li>
+    <li>interaksi dengan iklan, seperti tayangan dan klik;</li>
+    <li>data diagnostik dan kinerja aplikasi.</li>
+  </ul>
+  <p>Cara Google memakai data ini dijelaskan di <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cara Google menggunakan data dari situs atau aplikasi mitra</a> dan <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</p>
+
+  <h3>Pilihan Anda terkait iklan</h3>
+  <ul>
+    <li>Di Android, buka <em>Setelan › Google › Iklan</em> untuk mereset ID iklan atau menonaktifkan personalisasi iklan.</li>
+    <li>Jika Anda berada di wilayah yang mewajibkan persetujuan (misalnya Eropa), aplikasi menampilkan formulir persetujuan sebelum iklan dipersonalisasi. Anda bisa mengubah pilihan itu kapan saja <span class="ph">[sesuaikan: sebutkan menu pengaturan privasi di aplikasi, jika ada]</span>.</li>
+    <li>Menonaktifkan personalisasi tidak menghilangkan iklan, tetapi iklan yang tampil menjadi kurang relevan.</li>
+  </ul>
+  <p>Kami tidak mengendalikan isi iklan dari pihak ketiga. Jika Anda menemukan iklan yang tidak pantas, hubungi kami lewat kontak di bawah.</p>
+
+  <h2>3. Izin perangkat</h2>
+  <p class="note"><span class="ph">[Sesuaikan tabel ini dengan izin di AndroidManifest.xml aplikasi Anda]</span></p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Izin</th><th>Kegunaan</th></tr></thead>
+      <tbody>
+        <tr><td>Internet dan status jaringan</td><td>Menampilkan iklan dan menjalankan fitur yang butuh koneksi.</td></tr>
+        <tr><td>Jaringan lokal</td><td>Fitur server lokal, misalnya menghubungkan perangkat lain di toko yang sama.</td></tr>
+        <tr><td>Bluetooth</td><td>Menghubungkan printer struk.</td></tr>
+        <tr><td>Kamera</td><td>Memindai barcode produk.</td></tr>
+        <tr><td>Penyimpanan atau berbagi file</td><td>Mengekspor dan mengimpor laporan atau data produk.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>4. Cara kami menggunakan informasi</h2>
+  <ul>
+    <li>Menjalankan fitur kasir yang Anda pilih;</li>
+    <li>menampilkan iklan agar aplikasi tetap gratis;</li>
+    <li>memperbaiki error dan meningkatkan kinerja;</li>
+    <li>memenuhi kewajiban hukum yang berlaku.</li>
+  </ul>
+
+  <h2>5. Berbagi dengan pihak ketiga</h2>
+  <p>Kami tidak menjual data pribadi Anda. Data hanya diproses oleh penyedia layanan yang dibutuhkan aplikasi, yaitu Google AdMob untuk iklan <span class="ph">[tambahkan lainnya jika dipakai, mis. Firebase Crashlytics atau Analytics]</span>. Data juga dapat diungkapkan bila diwajibkan oleh hukum atau perintah pihak berwenang.</p>
+
+  <h2>6. Keamanan</h2>
+  <p>Data usaha disimpan di perangkat Anda, dan sebagian data sesi serta konfigurasi disimpan dengan enkripsi. Tidak ada metode penyimpanan yang sepenuhnya aman. Kami menyarankan Anda memakai kunci layar, memperbarui aplikasi, dan membuat cadangan data secara berkala. Kehilangan atau kerusakan perangkat dapat menyebabkan data lokal hilang bila tidak ada cadangan.</p>
+
+  <h2>7. Penyimpanan dan penghapusan data</h2>
+  <ul>
+    <li>Data lokal tersimpan selama aplikasi terpasang.</li>
+    <li>Menghapus aplikasi atau memilih <em>Setelan › Aplikasi › Kasir100 › Penyimpanan › Hapus data</em> akan menghapus data lokal tersebut.</li>
+    <li>Data yang sudah Anda ekspor atau bagikan ke aplikasi lain tidak ikut terhapus.</li>
+    <li>Data iklan yang dipegang Google diatur oleh kebijakan dan pengaturan akun Google Anda.</li>
+  </ul>
+
+  <h2>8. Hak Anda</h2>
+  <p>Sesuai Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi, Anda berhak meminta informasi tentang pemrosesan data, mengakses, memperbaiki, atau meminta penghapusan data pribadi Anda yang kami pegang, serta menarik persetujuan. Ajukan permintaan lewat kontak di bawah.</p>
+
+  <h2>9. Pelanggan Anda</h2>
+  <p>Jika Anda menyimpan data pelanggan (nama, nomor telepon, riwayat belanja) di aplikasi, Andalah yang bertanggung jawab atas data tersebut dan wajib memakainya sesuai hukum yang berlaku.</p>
+
+  <h2>10. Anak-anak</h2>
+  <p>Aplikasi ini ditujukan untuk pelaku usaha dan tidak ditujukan bagi anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan data pribadi anak. Jika Anda mengetahui hal itu terjadi, hubungi kami agar dapat kami tindaklanjuti.</p>
+
+  <h2>11. Perubahan kebijakan</h2>
+  <p>Kami dapat memperbarui kebijakan ini, misalnya ketika layanan iklan atau fitur berubah. Tanggal pembaruan terbaru selalu tercantum di bagian atas halaman. Perubahan penting akan diumumkan di aplikasi atau di halaman toko aplikasi.</p>
+
+  <h2>12. Hubungi kami</h2>
+  <p>Pertanyaan atau permintaan terkait privasi dapat dikirim ke:</p>
+  <ul>
+    <li>Email: <span class="ph">skenystudio@gmail.com</span></li>
+    <li>Pengembang: <span class="ph">Skeny Studio</span></li>
+    <li>Alamat: <span class="ph">Banyumas, Jawa Tengah</span></li>
+  </ul>
+
+  <footer>© 2026 <span class="ph">Skeny Studio</span>. Hak cipta dilindungi.</footer>
+</main>
+</body>
+</html>
