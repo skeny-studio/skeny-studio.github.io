@@ -71,7 +71,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
 <body>
 <main>
   <h1>Kebijakan Privasi</h1>
-  <p class="meta">Kasir100 oleh <span class="ph">Skeny Studio</span> · Terakhir diperbarui: 22 Oktober 2026</p>
+  <p class="meta">Kasir100 oleh Skeny Studio · Terakhir diperbarui: 22 Oktober 2026</p>
 
   <p>Kasir100 adalah aplikasi kasir yang bisa dipakai gratis dan didukung iklan. Halaman ini menjelaskan data apa yang diproses, untuk apa, dan pilihan yang Anda miliki. Dengan memakai aplikasi, Anda menyetujui kebijakan ini.</p>
 
@@ -80,6 +80,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
     <div class="row"><span>Data produk, stok, dan transaksi</span><span>Disimpan di perangkat Anda</span></div>
     <div class="row"><span>Biaya aplikasi</span><span>Gratis</span></div>
     <div class="row"><span>Menampilkan iklan</span><span class="yes">Ya (Google AdMob)</span></div>
+    <div class="row"><span>Login akun Google</span><span>Opsional, untuk bebas iklan</span></div>
     <div class="row"><span>Data toko dikirim ke jaringan iklan</span><span>Tidak</span></div>
     <div class="row"><span>Data Anda dijual</span><span>Tidak</span></div>
   </section>
@@ -92,7 +93,18 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
     <li>Fitur ekspor (Excel atau PDF) membuat file di perangkat Anda. Ke mana file itu dibagikan sepenuhnya Anda yang menentukan.</li>
   </ul>
 
-  <h2>2. Iklan dan data yang dikumpulkan otomatis</h2>
+  <h2>2. Login akun Google (opsional)</h2>
+  <p>Aplikasi dapat dipakai tanpa login. Jika Anda ingin aplikasi bebas iklan, Anda dapat masuk dengan akun Google.</p>
+  <ul>
+    <li>Dari Google, kami menerima alamat email, nama, foto profil (jika ada), dan ID akun unik. Kami tidak menerima kata sandi Google Anda.</li>
+    <li>Data ini dipakai untuk mengenali akun Anda, memeriksa status bebas iklan, dan membantu bila Anda menghubungi dukungan.</li>
+    <li>Selama status bebas iklan aktif, aplikasi tidak menampilkan iklan.</li>
+    <li>Data akun disimpan di <span class="ph">[sesuaikan: server kami / Firebase Authentication, dan lokasi servernya]</span>.</li>
+    <li>Data transaksi dan produk toko Anda tetap tidak dikaitkan dengan akun ini kecuali Anda mengaktifkan fitur yang memerlukannya.</li>
+  </ul>
+  <p>Anda dapat keluar kapan saja lewat <span class="ph">[sesuaikan: nama menu di aplikasi]</span>. Untuk menghapus akun beserta datanya, gunakan menu hapus akun di aplikasi atau kirim permintaan ke skenystudio@gmail.com. Kami akan menghapusnya dalam <span class="ph">[30]</span> hari, kecuali data yang wajib disimpan menurut hukum.</p>
+
+  <h2>3. Iklan dan data yang dikumpulkan otomatis</h2>
   <div class="ads"><strong>Aplikasi ini menampilkan iklan.</strong> Iklan disediakan oleh Google AdMob. Iklan ditampilkan di luar data toko Anda dan tidak dibuat dari isi transaksi atau daftar produk Anda.</div>
   <p>Agar iklan dapat ditampilkan, diukur, dan dicegah dari penyalahgunaan, Google AdMob dan mitranya dapat mengumpulkan data dari perangkat Anda, antara lain:</p>
   <ul>
@@ -112,7 +124,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
   </ul>
   <p>Kami tidak mengendalikan isi iklan dari pihak ketiga. Jika Anda menemukan iklan yang tidak pantas, hubungi kami lewat kontak di bawah.</p>
 
-  <h2>3. Izin perangkat</h2>
+  <h2>4. Izin perangkat</h2>
   <p class="note"><span class="ph">[Sesuaikan tabel ini dengan izin di AndroidManifest.xml aplikasi Anda]</span></p>
   <div class="scroll">
     <table>
@@ -127,7 +139,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
     </table>
   </div>
 
-  <h2>4. Cara kami menggunakan informasi</h2>
+  <h2>5. Cara kami menggunakan informasi</h2>
   <ul>
     <li>Menjalankan fitur kasir yang Anda pilih;</li>
     <li>menampilkan iklan agar aplikasi tetap gratis;</li>
@@ -135,41 +147,42 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); colo
     <li>memenuhi kewajiban hukum yang berlaku.</li>
   </ul>
 
-  <h2>5. Berbagi dengan pihak ketiga</h2>
-  <p>Kami tidak menjual data pribadi Anda. Data hanya diproses oleh penyedia layanan yang dibutuhkan aplikasi, yaitu Google AdMob untuk iklan <span class="ph">[tambahkan lainnya jika dipakai, mis. Firebase Crashlytics atau Analytics]</span>. Data juga dapat diungkapkan bila diwajibkan oleh hukum atau perintah pihak berwenang.</p>
+  <h2>6. Berbagi dengan pihak ketiga</h2>
+  <p>Kami tidak menjual data pribadi Anda. Data hanya diproses oleh penyedia layanan yang dibutuhkan aplikasi, yaitu Google AdMob untuk iklan dan Google Sign-In untuk login akun opsional <span class="ph">[tambahkan lainnya jika dipakai, mis. Firebase Crashlytics atau Analytics]</span>. Data juga dapat diungkapkan bila diwajibkan oleh hukum atau perintah pihak berwenang.</p>
 
-  <h2>6. Keamanan</h2>
+  <h2>7. Keamanan</h2>
   <p>Data usaha disimpan di perangkat Anda, dan sebagian data sesi serta konfigurasi disimpan dengan enkripsi. Tidak ada metode penyimpanan yang sepenuhnya aman. Kami menyarankan Anda memakai kunci layar, memperbarui aplikasi, dan membuat cadangan data secara berkala. Kehilangan atau kerusakan perangkat dapat menyebabkan data lokal hilang bila tidak ada cadangan.</p>
 
-  <h2>7. Penyimpanan dan penghapusan data</h2>
+  <h2>8. Penyimpanan dan penghapusan data</h2>
   <ul>
     <li>Data lokal tersimpan selama aplikasi terpasang.</li>
     <li>Menghapus aplikasi atau memilih <em>Setelan › Aplikasi › Kasir100 › Penyimpanan › Hapus data</em> akan menghapus data lokal tersebut.</li>
     <li>Data yang sudah Anda ekspor atau bagikan ke aplikasi lain tidak ikut terhapus.</li>
+    <li>Data akun Google yang tersimpan di sistem kami dihapus lewat permintaan hapus akun (lihat bagian 2).</li>
     <li>Data iklan yang dipegang Google diatur oleh kebijakan dan pengaturan akun Google Anda.</li>
   </ul>
 
-  <h2>8. Hak Anda</h2>
+  <h2>9. Hak Anda</h2>
   <p>Sesuai Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi, Anda berhak meminta informasi tentang pemrosesan data, mengakses, memperbaiki, atau meminta penghapusan data pribadi Anda yang kami pegang, serta menarik persetujuan. Ajukan permintaan lewat kontak di bawah.</p>
 
-  <h2>9. Pelanggan Anda</h2>
+  <h2>10. Pelanggan Anda</h2>
   <p>Jika Anda menyimpan data pelanggan (nama, nomor telepon, riwayat belanja) di aplikasi, Andalah yang bertanggung jawab atas data tersebut dan wajib memakainya sesuai hukum yang berlaku.</p>
 
-  <h2>10. Anak-anak</h2>
-  <p>Aplikasi ini ditujukan untuk pelaku usaha dan tidak ditujukan bagi anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan data pribadi anak. Jika Anda mengetahui hal itu terjadi, hubungi kami agar dapat kami tindaklanjuti.</p>
+  <h2>11. Anak-anak</h2>
+  <p>Aplikasi ini ditujukan untuk pelaku usaha dan tidak ditujukan bagi anak di bawah 18 tahun. Kami tidak dengan sengaja mengumpulkan data pribadi anak. Jika Anda mengetahui hal itu terjadi, hubungi kami agar dapat kami tindaklanjuti.</p>
 
-  <h2>11. Perubahan kebijakan</h2>
+  <h2>12. Perubahan kebijakan</h2>
   <p>Kami dapat memperbarui kebijakan ini, misalnya ketika layanan iklan atau fitur berubah. Tanggal pembaruan terbaru selalu tercantum di bagian atas halaman. Perubahan penting akan diumumkan di aplikasi atau di halaman toko aplikasi.</p>
 
-  <h2>12. Hubungi kami</h2>
+  <h2>13. Hubungi kami</h2>
   <p>Pertanyaan atau permintaan terkait privasi dapat dikirim ke:</p>
   <ul>
-    <li>Email: <span class="ph">skenystudio@gmail.com</span></li>
-    <li>Pengembang: <span class="ph">Skeny Studio</span></li>
-    <li>Alamat: <span class="ph">Banyumas, Jawa Tengah</span></li>
+    <li>Email: skenystudio@gmail.com</li>
+    <li>Pengembang: Skeny Studio</li>
+    <li>Alamat: Banyumas, Jawa Tengah, Indonesia</li>
   </ul>
 
-  <footer>© 2026 <span class="ph">Skeny Studio</span>. Hak cipta dilindungi.</footer>
+  <footer>© 2026 Skeny Studio. Hak cipta dilindungi.</footer>
 </main>
 </body>
 </html>
