@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-       :root {
+        :root {
             --portal-primary: #00BCD4;
             --portal-primary-hover: #00A5B8;
             --portal-dark: #121824;
@@ -29,21 +29,22 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f5f7fb;
-            color: #333;
+            background: var(--portal-bg);
+            color: var(--portal-text);
         }
 
         /* Navbar */
         .navbar {
-            background: #0f7d16;
+            background: var(--portal-dark);
             padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .navbar-brand span {
             font-weight: 700;
             font-size: 20px;
             letter-spacing: 0.5px;
+            color: #fff;
         }
 
         .navbar-brand img { border-radius: 8px; }
@@ -56,32 +57,32 @@
         }
 
         .nav-link:hover, .nav-link.active {
-            color: #fff !important;
+            color: var(--portal-primary) !important;
         }
 
         /* Hero Section */
         .hero {
             padding: 90px 0 60px;
-            background: linear-gradient(135deg, #ffffff, #edf2ff);
+            background: linear-gradient(135deg, #ffffff, #e0f7fa);
         }
 
         .hero h1 {
             font-size: 42px;
             font-weight: 800;
-            color: var(--dark-color);
+            color: var(--portal-dark);
             line-height: 1.25;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 17px;
-            color: #555;
+            color: var(--portal-text-secondary);
             line-height: 1.7;
             margin-bottom: 30px;
         }
 
         .btn-download {
-            background: var(--dark-color);
+            background: var(--portal-dark);
             color: white;
             padding: 13px 30px;
             border-radius: 50px;
@@ -92,18 +93,18 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(17, 28, 49, 0.2);
+            box-shadow: 0 4px 15px rgba(18, 24, 36, 0.25);
         }
 
         .btn-download:hover {
-            background: var(--primary-color);
+            background: var(--portal-primary);
             color: white;
             transform: translateY(-3px);
         }
 
         .btn-outline-custom {
-            border: 2px solid var(--dark-color);
-            color: var(--dark-color);
+            border: 2px solid var(--portal-dark);
+            color: var(--portal-dark);
             padding: 11px 28px;
             border-radius: 50px;
             font-weight: 600;
@@ -112,22 +113,33 @@
         }
 
         .btn-outline-custom:hover {
-            background: var(--dark-color);
+            background: var(--portal-dark);
             color: white;
+        }
+
+        /* Badge */
+        .badge-portal {
+            background: var(--portal-primary) !important;
+            color: #fff !important;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            padding: 7px 14px !important;
+            border-radius: 50px;
         }
 
         /* Product Cards */
         .product-section {
             padding: 80px 0;
-            background: #fff;
+            background: var(--portal-surface);
         }
 
         .product-card {
-            background: #fff;
+            background: var(--portal-surface);
             border-radius: 24px;
             padding: 40px 30px;
             height: 100%;
-            border: 1px solid #edf0f4;
+            border: 1px solid var(--portal-border);
             box-shadow: 0 10px 30px rgba(0,0,0,.04);
             transition: .3s;
         }
@@ -135,14 +147,14 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 45px rgba(0,0,0,.08);
-            border-color: var(--primary-color);
+            border-color: var(--portal-primary);
         }
 
         .product-card .icon-box {
             width: 70px;
             height: 70px;
-            background: #e9fff4;
-            color: var(--primary-color);
+            background: #e0f7fa;
+            color: var(--portal-primary);
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -153,12 +165,12 @@
 
         .product-card h3 {
             font-weight: 700;
-            color: var(--dark-color);
+            color: var(--portal-dark);
             margin-bottom: 15px;
         }
 
         .product-card p {
-            color: var(--text-muted);
+            color: var(--portal-text-secondary);
             font-size: 15px;
             line-height: 1.7;
         }
@@ -175,38 +187,39 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            color: var(--portal-text);
         }
 
         .product-card ul li i {
-            color: var(--primary-color);
+            color: var(--portal-primary);
         }
 
         /* Features */
         .features {
-            background: var(--light-bg);
+            background: var(--portal-bg);
             padding: 90px 0;
         }
 
         .feature-box {
-            background: #fff;
+            background: var(--portal-surface);
             border-radius: 20px;
             padding: 30px;
             height: 100%;
             transition: .35s;
-            border: 1px solid #edf0f4;
+            border: 1px solid var(--portal-border);
         }
 
         .feature-box:hover {
             transform: translateY(-6px);
             box-shadow: 0 15px 35px rgba(0,0,0,.07);
-            border-color: var(--primary-color);
+            border-color: var(--portal-primary);
         }
 
         .feature-box .icon {
             width: 55px;
             height: 55px;
-            background: #e9fff4;
-            color: var(--primary-color);
+            background: #e0f7fa;
+            color: var(--portal-primary);
             border-radius: 14px;
             display: flex;
             align-items: center;
@@ -218,37 +231,29 @@
         .feature-box h5 {
             font-weight: 600;
             margin-bottom: 10px;
-            color: var(--dark-color);
+            color: var(--portal-dark);
             font-size: 16px;
         }
 
         .feature-box p {
-            color: var(--text-muted);
+            color: var(--portal-text-secondary);
             font-size: 13.5px;
             line-height: 1.6;
             margin: 0;
         }
 
-        .badge {
-            font-size: 12px;
-            letter-spacing: 1px;
-            font-weight: 600;
-            padding: 7px 14px !important;
-            border-radius: 50px;
-        }
-
         /* Pricing */
         .pricing-section {
-            background: #fff;
+            background: var(--portal-surface);
             padding: 90px 0;
         }
 
         .card-pricing {
             position: relative;
-            background: #fff;
+            background: var(--portal-surface);
             border-radius: 24px;
             padding: 35px;
-            border: 1px solid #edf0f4;
+            border: 1px solid var(--portal-border);
             box-shadow: 0 12px 35px rgba(0,0,0,.05);
             height: 100%;
             display: flex;
@@ -257,7 +262,7 @@
         }
 
         .card-pricing.dark {
-            background: var(--dark-color);
+            background: var(--portal-dark);
             color: white;
             border: none;
         }
@@ -273,13 +278,13 @@
         }
 
         .badge-basic {
-            background: var(--dark-color);
+            background: var(--portal-dark);
             color: white;
         }
 
         .badge-popular {
-            background: #58D400;
-            color: #111;
+            background: var(--portal-primary);
+            color: #fff;
         }
 
         .card-pricing h2 {
@@ -308,7 +313,11 @@
         }
 
         .card-pricing i {
-            color: #55D000;
+            color: var(--portal-primary);
+        }
+
+        .card-pricing.dark i {
+            color: var(--portal-primary);
         }
 
         .price-box h4 {
@@ -320,7 +329,7 @@
         .price-box small {
             font-size: 15px;
             font-weight: 400;
-            color: var(--text-muted);
+            color: var(--portal-text-secondary);
         }
 
         .card-pricing.dark .price-box small {
@@ -332,26 +341,30 @@
             padding: 90px 0;
         }
 
-        .about-section { background: var(--light-bg); }
-        .contact-section { background: #fff; }
+        .about-section { background: var(--portal-bg); }
+        .contact-section { background: var(--portal-surface); }
 
         .about-card, .contact-card {
-            background: #fff;
+            background: var(--portal-surface);
             padding: 50px;
             border-radius: 24px;
             box-shadow: 0 12px 35px rgba(0,0,0,.04);
-            border: 1px solid #edf0f4;
+            border: 1px solid var(--portal-border);
         }
 
         .contact-card {
-            background: var(--light-bg);
+            background: var(--portal-bg);
             max-width: 900px;
             margin: auto;
         }
 
+        .contact-card h5 i {
+            color: var(--portal-primary);
+        }
+
         footer {
-            background: #111;
-            color: rgba(255,255,255,0.6);
+            background: var(--portal-dark);
+            color: rgba(255,255,255,0.65);
             padding: 28px;
             text-align: center;
             font-size: 14px;
@@ -395,7 +408,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-success mb-3">2 APLIKASI UNGGULAN</span>
+                    <span class="badge badge-portal mb-3">2 APLIKASI UNGGULAN</span>
                     <h1>Solusi Digital untuk Bisnis & Kehadiran Karyawan</h1>
                     <p>
                         Kami menyediakan <strong>Aplikasi Kasir</strong> dengan perhitungan stok sampai unit satuan faktor, 
@@ -422,8 +435,8 @@
     <section id="products" class="product-section">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-success mb-2">PRODUK KAMI</span>
-                <h2 class="fw-bold text-dark">Dua Solusi Unggulan untuk Bisnis Anda</h2>
+                <span class="badge badge-portal mb-2">PRODUK KAMI</span>
+                <h2 class="fw-bold" style="color: var(--portal-dark)">Dua Solusi Unggulan untuk Bisnis Anda</h2>
                 <p class="text-muted">Pilih aplikasi yang sesuai dengan kebutuhan operasional Anda</p>
             </div>
 
@@ -477,12 +490,11 @@
     <section id="features" class="features">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-success mb-2">FITUR UNGGULAN</span>
-                <h2 class="fw-bold text-dark">Fitur yang Memudahkan Operasional Anda</h2>
+                <span class="badge badge-portal mb-2">FITUR UNGGULAN</span>
+                <h2 class="fw-bold" style="color: var(--portal-dark)">Fitur yang Memudahkan Operasional Anda</h2>
             </div>
 
             <div class="row g-4">
-                <!-- Fitur Kasir -->
                 <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">📦</div>
@@ -543,94 +555,93 @@
         </div>
     </section>
 
-<!-- Harga Section -->
-<section id="pricing" class="pricing-section">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="badge bg-success mb-2">PAKET HARGA</span>
-            <h2 class="fw-bold text-dark">Satu Lisensi untuk 2 Aplikasi</h2>
-            <p class="text-muted">Beli 1 lisensi, bisa digunakan untuk <strong>Aplikasi Kasir</strong> dan <strong>Absensi Wajah</strong></p>
-        </div>
+    <!-- Harga Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge badge-portal mb-2">PAKET HARGA</span>
+                <h2 class="fw-bold" style="color: var(--portal-dark)">Satu Lisensi untuk 2 Aplikasi</h2>
+                <p class="text-muted">Beli 1 lisensi, bisa digunakan untuk <strong>Aplikasi Kasir</strong> dan <strong>Absensi Wajah</strong></p>
+            </div>
 
-        <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center">
 
-            <!-- Paket Tahunan -->
-            <div class="col-lg-5 col-md-6">
-                <div class="card-pricing dark">
-                    <div>
-                        <div class="badge-pricing badge-popular">PALING HEMAT ⭐</div>
-                        <h2 class="mt-3">Paket Tahunan</h2>
-                        <p class="small opacity-75 mb-2">Hemat 38%</p>
-                        <hr>
-                        <ul>
-                            <li><i class="bi bi-check-circle-fill"></i> 1 Lisensi untuk 2 Aplikasi</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Aplikasi Kasir + Absensi Wajah</li>
-                            <li><i class="bi bi-check-circle-fill"></i> 2 Perangkat & 2 Toko</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Cetak struk printer Bluetooth</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Laporan penjualan lengkap</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition & Payroll</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Dukungan pembaruan aplikasi</li>
-                        </ul>
+                <!-- Paket Tahunan -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="card-pricing dark">
+                        <div>
+                            <div class="badge-pricing badge-popular">PALING HEMAT ⭐</div>
+                            <h2 class="mt-3">Paket Tahunan</h2>
+                            <p class="small opacity-75 mb-2">Hemat 38%</p>
+                            <hr>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> 1 Lisensi untuk 2 Aplikasi</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Aplikasi Kasir + Absensi Wajah</li>
+                                <li><i class="bi bi-check-circle-fill"></i> 2 Perangkat & 2 Toko</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Cetak struk printer Bluetooth</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Laporan penjualan lengkap</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Face Recognition & Payroll</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Dukungan pembaruan aplikasi</li>
+                            </ul>
+                        </div>
+                        <div class="price-box">
+                            <span class="small" style="color:#a0aec0">Harga coret Rp240.000</span>
+                            <h4>Rp150.000 <small>/ tahun</small></h4>
+                            <small class="d-block mt-1">Hanya Rp12.500 / bulan</small>
+                        </div>
                     </div>
-                    <div class="price-box">
-                        <span class="text-muted small">Harga coret Rp240.000</span>
-                        <h4>Rp150.000 <small>/ tahun</small></h4>
-                        <small class="d-block mt-1">Hanya Rp12.500 / bulan</small>
+                </div>
+
+                <!-- Paket Bulanan -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="card-pricing">
+                        <div>
+                            <div class="badge-pricing badge-basic">Fleksibel</div>
+                            <h2 class="mt-3">Paket Bulanan</h2>
+                            <p class="small text-muted mb-2">Pilihan lisensi fleksibel</p>
+                            <hr>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> 1 Lisensi untuk 2 Aplikasi</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Aplikasi Kasir + Absensi Wajah</li>
+                                <li><i class="bi bi-check-circle-fill"></i> 2 Perangkat & 2 Toko</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Semua fitur lengkap</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bisa tambah toko & perangkat</li>
+                            </ul>
+                        </div>
+                        <div class="price-box">
+                            <span class="text-muted small">Harga</span>
+                            <h4>Rp20.000 <small>/ bulan</small></h4>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Paket Bulanan -->
-            <div class="col-lg-5 col-md-6">
-                <div class="card-pricing">
-                    <div>
-                        <div class="badge-pricing badge-basic">Fleksibel</div>
-                        <h2 class="mt-3">Paket Bulanan</h2>
-                        <p class="small text-muted mb-2">Pilihan lisensi fleksibel</p>
-                        <hr>
-                        <ul>
-                            <li><i class="bi bi-check-circle-fill"></i> 1 Lisensi untuk 2 Aplikasi</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Aplikasi Kasir + Absensi Wajah</li>
-                            <li><i class="bi bi-check-circle-fill"></i> 2 Perangkat & 2 Toko</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Semua fitur lengkap</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Bisa tambah toko & perangkat</li>
-                        </ul>
-                    </div>
-                    <div class="price-box">
-                        <span class="text-muted small">Harga</span>
-                        <h4>Rp20.000 <small>/ bulan</small></h4>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8">
+                    <div class="alert alert-light border text-center py-3">
+                        <small class="text-muted">
+                            <strong>Toko Tambahan:</strong> +Rp20.000 / toko &nbsp;|&nbsp;
+                            <strong>Perangkat Tambahan:</strong> +Rp10.000 / perangkat
+                        </small>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Keterangan Tambahan -->
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8">
-                <div class="alert alert-light border text-center py-3">
-                    <small class="text-muted">
-                        <strong>Toko Tambahan:</strong> +Rp20.000 / toko &nbsp;|&nbsp;
-                        <strong>Perangkat Tambahan:</strong> +Rp10.000 / perangkat
-                    </small>
-                </div>
+            <div class="text-center mt-4">
+                <a href="https://play.google.com/store/apps/dev?id=7740956881188344106" class="btn-download">
+                    <i class="bi bi-google-play"></i> Beli Lisensi Sekarang
+                </a>
             </div>
         </div>
-
-        <div class="text-center mt-4">
-            <a href="https://play.google.com/store/apps/dev?id=7740956881188344106" class="btn-download">
-                <i class="bi bi-google-play"></i> Beli Lisensi Sekarang
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Tentang Kami -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-card">
                 <div class="text-center mb-4">
-                    <span class="badge bg-success mb-2">TENTANG KAMI</span>
-                    <h2 class="fw-bold">Skeny Studio – Solusi Digital dari Jawa Tengah</h2>
+                    <span class="badge badge-portal mb-2">TENTANG KAMI</span>
+                    <h2 class="fw-bold" style="color: var(--portal-dark)">Skeny Studio – Solusi Digital dari Jawa Tengah</h2>
                 </div>
                 <p class="lead text-muted text-center mb-4">
                     Kami mengembangkan aplikasi praktis untuk membantu UMKM dan perusahaan mengelola operasional sehari-hari. 
@@ -647,30 +658,30 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-card">
-                <h2 class="fw-bold mb-4 text-center">Hubungi Kami</h2>
-                <p class="mb-5 text-center">
+                <h2 class="fw-bold mb-4 text-center" style="color: var(--portal-dark)">Hubungi Kami</h2>
+                <p class="mb-5 text-center text-muted">
                     Butuh informasi tentang Aplikasi Kasir, Absensi Wajah, atau ingin konsultasi paket? Tim kami siap membantu.
                 </p>
 
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <h5><i class="bi bi-envelope-fill text-success me-2"></i> Email</h5>
+                            <h5><i class="bi bi-envelope-fill me-2"></i> Email</h5>
                             <p class="ps-4">skenystudio@gmail.com</p>
                         </div>
                         <div class="mb-3">
-                            <h5><i class="bi bi-geo-alt-fill text-success me-2"></i> Lokasi</h5>
+                            <h5><i class="bi bi-geo-alt-fill me-2"></i> Lokasi</h5>
                             <p class="ps-4">Banyumas, Jawa Tengah, Indonesia</p>
                         </div>
                         <div>
-                            <h5><i class="bi bi-clock-fill text-success me-2"></i> Jam Operasional</h5>
+                            <h5><i class="bi bi-clock-fill me-2"></i> Jam Operasional</h5>
                             <p class="ps-4 mb-1">Senin – Jumat</p>
                             <p class="ps-4">08:00 – 17:00 WIB</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h5><i class="bi bi-headset text-success me-2"></i> Layanan Bantuan</h5>
-                        <p class="ps-4">
+                        <h5><i class="bi bi-headset me-2"></i> Layanan Bantuan</h5>
+                        <p class="ps-4 text-muted">
                             Untuk pertanyaan produk, bantuan teknis, atau peluang kerja sama, silakan hubungi kami melalui email. 
                             Kami akan merespon secepat mungkin pada jam kerja.
                         </p>
