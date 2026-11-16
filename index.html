@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absensi Wajah & Payroll - Absensi Digital</title>
+    <title>Skeny Studio - Aplikasi Kasir & Absensi Wajah</title>
     
     <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,9 +21,7 @@
             --text-muted: #6b7280;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -40,59 +38,56 @@
 
         .navbar-brand span {
             font-weight: 700;
-            font-size: 22px;
+            font-size: 20px;
             letter-spacing: 0.5px;
         }
 
-        .navbar-brand img {
-            border-radius: 8px;
-        }
+        .navbar-brand img { border-radius: 8px; }
 
         .nav-link {
             color: rgba(255,255,255,0.85) !important;
-            margin-left: 25px;
+            margin-left: 20px;
             font-weight: 500;
             transition: .3s;
         }
 
         .nav-link:hover, .nav-link.active {
-            color: var(--primary-color) !important;
+            color: #fff !important;
         }
 
         /* Hero Section */
-       .hero {
-            padding: 100px 0 50px;
+        .hero {
+            padding: 90px 0 60px;
             background: linear-gradient(135deg, #ffffff, #edf2ff);
-            position: relative;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 800;
             color: var(--dark-color);
-            line-height: 1.2;
-            margin-bottom: 25px;
+            line-height: 1.25;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 17px;
             color: #555;
-            line-height: 1.8;
-            margin-bottom: 35px;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
 
         .btn-download {
             background: var(--dark-color);
             color: white;
-            padding: 14px 35px;
+            padding: 13px 30px;
             border-radius: 50px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             transition: .3s ease-in-out;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             box-shadow: 0 4px 15px rgba(17, 28, 49, 0.2);
         }
 
@@ -100,146 +95,158 @@
             background: var(--primary-color);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 185, 107, 0.3);
         }
 
-        .phone {
-            width: 100%;
-            max-width: 480px;
-            animation: float 4s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .video-tutorial {
-            background: linear-gradient(180deg, #edf2ff, #f5f7fb);
-            padding: 30px 0 60px 0;
-            position: relative;
-            z-index: 11;
-        }
-
-        /* Statistik Section */
-        .stats {
-            margin-top: -30px;
-            position: relative;
-            z-index: 12;
-        }
-
-        .card-stat {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.05);
-            background: white;
-            padding: 30px !important;
+        .btn-outline-custom {
+            border: 2px solid var(--dark-color);
+            color: var(--dark-color);
+            padding: 11px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
             transition: .3s;
         }
 
-        .card-stat:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,.1);
+        .btn-outline-custom:hover {
+            background: var(--dark-color);
+            color: white;
         }
 
-        .card-stat h2 {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 36px;
-            margin-bottom: 5px;
-        }
-
-        .card-stat p {
-            margin: 0;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* Features Section */
-        .features {
-            background: var(--light-bg);
-            padding: 100px 0;
-        }
-
-        .feature-box {
+        /* Product Cards */
+        .product-section {
+            padding: 80px 0;
             background: #fff;
-            border-radius: 20px;
-            padding: 35px;
-            height: 100%;
-            transition: .35s;
-            border: 1px solid #edf0f4;
-            box-shadow: 0 8px 25px rgba(0,0,0,.02);
         }
 
-        .feature-box:hover {
+        .product-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px 30px;
+            height: 100%;
+            border: 1px solid #edf0f4;
+            box-shadow: 0 10px 30px rgba(0,0,0,.04);
+            transition: .3s;
+        }
+
+        .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 45px rgba(0,0,0,.08);
             border-color: var(--primary-color);
         }
 
-        .feature-box .icon {
-            width: 60px;
-            height: 60px;
+        .product-card .icon-box {
+            width: 70px;
+            height: 70px;
             background: #e9fff4;
             color: var(--primary-color);
-            border-radius: 16px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 25px;
+        }
+
+        .product-card h3 {
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .product-card ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-card ul li i {
+            color: var(--primary-color);
+        }
+
+        /* Features */
+        .features {
+            background: var(--light-bg);
+            padding: 90px 0;
+        }
+
+        .feature-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: .35s;
+            border: 1px solid #edf0f4;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+            border-color: var(--primary-color);
+        }
+
+        .feature-box .icon {
+            width: 55px;
+            height: 55px;
+            background: #e9fff4;
+            color: var(--primary-color);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         .feature-box h5 {
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: var(--dark-color);
+            font-size: 16px;
         }
 
         .feature-box p {
             color: var(--text-muted);
-            line-height: 1.7;
+            font-size: 13.5px;
+            line-height: 1.6;
             margin: 0;
-            font-size: 14px;
         }
 
         .badge {
             font-size: 12px;
             letter-spacing: 1px;
             font-weight: 600;
-            padding: 8px 16px !important;
+            padding: 7px 14px !important;
             border-radius: 50px;
         }
 
-        /* Pricing Section */
+        /* Pricing */
         .pricing-section {
             background: #fff;
-            padding: 100px 0;
-        }
-
-        .pricing-title h1 {
-            font-size: 38px;
-            font-weight: 800;
-            color: var(--dark-color);
-        }
-
-        .pricing-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 50px;
+            padding: 90px 0;
         }
 
         .card-pricing {
             position: relative;
-            width: 100%;
-            max-width: 400px;
             background: #fff;
             border-radius: 24px;
-            padding: 40px;
+            padding: 35px;
             border: 1px solid #edf0f4;
-            box-shadow: 0 15px 40px rgba(0,0,0,.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,.05);
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -253,14 +260,14 @@
 
         .badge-pricing {
             position: absolute;
-            top: -15px;
-            left: 35px;
-            padding: 6px 20px;
+            top: -12px;
+            left: 30px;
+            padding: 5px 16px;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
         }
-        
+
         .badge-basic {
             background: var(--dark-color);
             color: white;
@@ -272,168 +279,84 @@
         }
 
         .card-pricing h2 {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .card-pricing hr {
-            margin: 25px 0;
+            margin: 20px 0;
             opacity: 0.15;
-        }
-
-        .card-pricing h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
         }
 
         .card-pricing ul {
             list-style: none;
             padding: 0;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .card-pricing li {
-            margin-bottom: 15px;
-            font-size: 15px;
+            margin-bottom: 12px;
+            font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .card-pricing i {
             color: #55D000;
-            font-size: 18px;
-        }
-
-        .price-box span {
-            font-size: 14px;
-            color: var(--text-muted);
-            display: block;
-        }
-        .card-pricing.dark .price-box span {
-            color: #a0aec0;
         }
 
         .price-box h4 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
             margin: 5px 0 0 0;
         }
 
         .price-box small {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             color: var(--text-muted);
         }
+
         .card-pricing.dark .price-box small {
             color: #a0aec0;
         }
 
-        /* About Section */
-        .about-section {
-            background: var(--light-bg);
-            padding: 100px 0;
+        /* About & Contact */
+        .about-section, .contact-section {
+            padding: 90px 0;
         }
 
-        .about-card {
+        .about-section { background: var(--light-bg); }
+        .contact-section { background: #fff; }
+
+        .about-card, .contact-card {
             background: #fff;
-            padding: 60px;
+            padding: 50px;
             border-radius: 24px;
-            box-shadow: 0 15px 40px rgba(0,0,0,.04);
+            box-shadow: 0 12px 35px rgba(0,0,0,.04);
             border: 1px solid #edf0f4;
-        }
-
-        .about-card h2 {
-            font-weight: 700;
-            color: var(--dark-color);
-        }
-
-        .about-card .lead {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .about-item {
-            text-align: center;
-            padding: 20px 10px;
-        }
-
-        .about-item i {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .about-item h5 {
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--dark-color);
-        }
-
-        .about-item p {
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: #fff;
-            padding: 100px 0;
         }
 
         .contact-card {
             background: var(--light-bg);
             max-width: 900px;
             margin: auto;
-            padding: 50px;
-            border-radius: 24px;
-            border: 1px solid #edf0f4;
         }
 
-        .contact-card h2 {
-            font-weight: 700;
-            color: var(--dark-color);
-        }
-
-        .contact-card h5 {
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-
-        .contact-card p {
-            color: #555;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* Footer */
         footer {
             background: #111;
             color: rgba(255,255,255,0.6);
-            padding: 30px;
+            padding: 28px;
             text-align: center;
             font-size: 14px;
-            border-top: 1px solid #222;
         }
 
-        /* Responsive Breakpoints Fixes */
         @media (max-width: 992px) {
-            .hero { padding: 60px 0 100px; text-align: center; }
-            .hero h1 { font-size: 38px; }
-            .hero img { margin-top: 50px; max-width: 380px; }
-            .stats { margin-top: -40px; }
-            .pricing-title h1 { font-size: 32px; }
-            .about-card { padding: 40px 25px; }
-        }
-
-        @media (max-width: 768px) {
-            .contact-card { padding: 30px 20px; }
-            .contact-card h2 { font-size: 26px; }
+            .hero { padding: 60px 0 50px; text-align: center; }
+            .hero h1 { font-size: 34px; }
+            .about-card, .contact-card { padding: 35px 25px; }
         }
     </style>
 </head>
@@ -444,8 +367,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="images/logo_hitam.png" alt="Logo" width="40" height="40" class="me-2">
-                <span>Absensi Wajah - Payroll</span>
+                <img src="images/logo_hitam.png" alt="Logo" width="38" height="38" class="me-2">
+                <span>Skeny Studio</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
@@ -453,9 +376,10 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
                     <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                 </ul>
             </div>
@@ -466,97 +390,79 @@
     <section class="hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <span class="badge bg-success mb-3">SISTEM ABSENSI - PAYROLL PINTAR</span>
-                    <h1>Satu Smartphone, Gantikan Mesin Absen & Kalkulasi Gaji Otomatis</h1>
-                    
+                <div class="col-lg-7">
+                    <span class="badge bg-success mb-3">2 APLIKASI UNGGULAN</span>
+                    <h1>Solusi Digital untuk Bisnis & Kehadiran Karyawan</h1>
                     <p>
-                        Kelola kehadiran, hitung jam <strong>lembur</strong>, hingga integrasikan data ke sistem <strong>payroll</strong> secara <strong>real-time</strong> langsung dari satu perangkat.
+                        Kami menyediakan <strong>Aplikasi Kasir</strong> dengan perhitungan stok sampai unit satuan faktor, 
+                        dan <strong>Absensi Wajah</strong> berbasis face recognition + payroll. 
+                        Dirancang sederhana, stabil, dan siap pakai untuk UMKM hingga perusahaan.
                     </p>
-
-                    <!-- Highlight Fitur Utama -->
-                    <div class="mb-4">
-                        <div class="d-flex align-items-start mb-2">
-                            <i class="bi bi-phone-fill text-success me-3 fs-4"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">1 HP untuk Semua Karyawan</h6>
-                                <p class="text-muted small m-0">Cukup gunakan satu smartphone di lokasi untuk memproses absensi seluruh tim.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start mb-2">
-                            <i class="bi bi-clock-history text-success me-3 fs-4"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">Manajemen Lembur Otomatis</h6>
-                                <p class="text-muted small m-0">Catat dan hitung durasi jam lembur karyawan secara akurat tanpa kalkulasi manual.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="bi bi-cash-stack text-success me-3 fs-4"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">Integrasi Payroll & Penggajian</h6>
-                                <p class="text-muted small m-0">Sinkronisasi data kehadiran dan lembur secara langsung untuk perhitungan gaji yang cepat.</p>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#products" class="btn-download">
+                            <i class="bi bi-grid-fill"></i> Lihat Produk
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-outline-custom">
+                            <i class="bi bi-google-play"></i> Unduh di Play Store
+                        </a>
                     </div>
-                    
-                    <p class="text-muted small mb-4">
-                        🚀 Solusi lengkap absensi, lembur, dan payroll berbasis di Central Java, Indonesia untuk sekolah, kantor, pabrik, hingga instansi.
-                    </p>
-
-                    <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-download">
-                        <i class="bi bi-google-play"></i> Unduh Sekarang
-                    </a>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="images/lanscape.png" class="phone" alt="Pratinjau Aplikasi">
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <img src="images/lanscape.png" class="img-fluid" style="max-width: 420px;" alt="Aplikasi Skeny Studio">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="video-tutorial py-5">
+    <!-- Produk Section -->
+    <section id="products" class="product-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <span class="badge bg-success mb-2">DEMO APLIKASI</span>
-                    <h2 class="fw-bold text-dark mb-4">Cara Kerja Absensi Wajah - Payroll</h2>
-                    
-                    <div class="video-wrapper shadow-lg rounded-4 overflow-hidden bg-black">
-                        <video controls poster="images/lanscape.png" class="w-100 d-block">
-                            <source src="video/tutorial.mp4" type="video/mp4">
-                            Browser Anda tidak mendukung tag video. Silakan unduh video melalui link yang tersedia.
-                        </video>
-                    </div>
-                    
-                    <p class="text-muted small mt-3 mb-0">
-                        *Tonton video singkat di atas untuk melihat proses absensi wajah, perhitungan lembur, dan sinkronisasi data.
-                    </p>
-                </div>
+            <div class="text-center mb-5">
+                <span class="badge bg-success mb-2">PRODUK KAMI</span>
+                <h2 class="fw-bold text-dark">Dua Solusi Unggulan untuk Bisnis Anda</h2>
+                <p class="text-muted">Pilih aplikasi yang sesuai dengan kebutuhan operasional Anda</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Statistik Section -->
-    <section class="stats">
-        <div class="container">
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-stat text-center">
-                        <h2>10K+</h2>
-                        <p>Pengguna Aktif</p>
+                <!-- Produk 1: Aplikasi Kasir -->
+                <div class="col-lg-6">
+                    <div class="product-card">
+                        <div class="icon-box">🛒</div>
+                        <h3>Aplikasi Kasir</h3>
+                        <p>
+                            Aplikasi kasir yang membantu transaksi penjualan dan pengelolaan stok lebih cepat serta sederhana. 
+                            Antarmuka ringan, mudah digunakan, stabil di berbagai perangkat, dan menghemat waktu.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Perhitungan stok hingga unit satuan faktor</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Stok akurat dari kemasan besar sampai satuan terkecil</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Transaksi cepat & laporan real-time</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cocok untuk toko, warung, dan UMKM</li>
+                        </ul>
+                        <a href="#" class="btn-download mt-2">
+                            <i class="bi bi-download"></i> Unduh Aplikasi Kasir
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-stat text-center">
-                        <h2>500+</h2>
-                        <p>Perusahaan</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-stat text-center">
-                        <h2>99.9%</h2>
-                        <p>Akurasi Deteksi</p>
+
+                <!-- Produk 2: Absensi Wajah -->
+                <div class="col-lg-6">
+                    <div class="product-card">
+                        <div class="icon-box">😊</div>
+                        <h3>Absensi Wajah & Payroll</h3>
+                        <p>
+                            Sistem absensi digital berbasis face recognition. Kelola kehadiran, hitung jam lembur, 
+                            dan integrasikan data ke sistem payroll secara real-time hanya dengan satu smartphone.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition + Anti-Spoof</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Manajemen shift & lembur otomatis</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Integrasi payroll & laporan lengkap</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mode offline & multi-cabang</li>
+                        </ul>
+                        <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-download mt-2">
+                            <i class="bi bi-google-play"></i> Unduh Absensi Wajah
+                        </a>
                     </div>
                 </div>
             </div>
@@ -567,94 +473,66 @@
     <section id="features" class="features">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-success mb-2">FITUR UTAMA</span>
-                <h2 class="fw-bold text-dark">Fitur Canggih untuk Absensi, Lembur & Payroll</h2>
-                <p class="text-muted">Semua yang Anda butuhkan untuk mengelola kehadiran, lembur, dan penggajian secara efisien.</p>
+                <span class="badge bg-success mb-2">FITUR UNGGULAN</span>
+                <h2 class="fw-bold text-dark">Fitur yang Memudahkan Operasional Anda</h2>
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
+                <!-- Fitur Kasir -->
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
-                        <div class="icon">👥</div>
-                        <h5>Absensi Karyawan Tanpa Batas</h5>
-                        <p>Kelola data dan riwayat kehadiran seluruh karyawan tanpa ada batasan kuota.</p>
+                        <div class="icon">📦</div>
+                        <h5>Stok Unit Faktor</h5>
+                        <p>Hitung stok dari dus/karton hingga pcs secara otomatis dan akurat.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="icon">⚡</div>
+                        <h5>Transaksi Cepat</h5>
+                        <p>Proses penjualan lebih cepat dibanding cara manual, hemat waktu kasir.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">😊</div>
-                        <h5>Absensi Face Recognition</h5>
-                        <p>Verifikasi kehadiran yang aman dan akurat menggunakan teknologi pengenalan wajah biometrik terotomatisasi.</p>
+                        <h5>Face Recognition</h5>
+                        <p>Absensi wajah akurat dengan teknologi anti-spoofing untuk cegah kecurangan.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="icon">📡</div>
-                        <h5>Mode Absen Offline</h5>
-                        <p>Karyawan tetap bisa melakukan absen walau tanpa internet. Data otomatis tersinkronisasi saat terhubung.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="icon">⏰</div>
-                        <h5>Manajemen Shift & Lembur</h5>
-                        <p>Atur jadwal kerja fleksibel, pembagian shift, serta rekapitulasi jam lembur secara otomatis.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">💰</div>
-                        <h5>Integrasi HRIS & Payroll</h5>
-                        <p>Hubungkan data absensi dan lembur langsung ke sistem penggajian untuk kalkulasi gaji otomatis.</p>
+                        <h5>Payroll Otomatis</h5>
+                        <p>Data kehadiran & lembur langsung terhubung ke perhitungan gaji.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
-                        <div class="icon">🔗</div>
-                        <h5>REST API & Webhook</h5>
-                        <p>Kemudahan integrasi data dengan aplikasi pihak ketiga maupun sistem internal bisnis Anda.</p>
+                        <div class="icon">📡</div>
+                        <h5>Mode Offline</h5>
+                        <p>Tetap bisa absen atau transaksi meski tanpa internet, data tersinkron otomatis.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">🏢</div>
-                        <h5>Manajemen Multi-Cabang</h5>
-                        <p>Pantau kehadiran karyawan di berbagai kantor atau cabang yang berbeda dari satu dashboard tunggal.</p>
+                        <h5>Multi Cabang</h5>
+                        <p>Pantau stok atau kehadiran dari banyak lokasi dalam satu dashboard.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="icon">💾</div>
-                        <h5>Backup & Restore</h5>
-                        <p>Amankan data absensi berharga Anda dengan pencadangan otomatis dan pemulihan sekali klik.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="icon">✔</div>
-                        <h5>Alur Kerja Persetujuan</h5>
-                        <p>Proses pengajuan cuti, izin, dan koreksi absensi menjadi lebih terstruktur melalui alur persetujuan resmi.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="icon">📈</div>
-                        <h5>Analitik Lanjutan</h5>
-                        <p>Dapatkan insight mendalam lewat laporan kehadiran, tren produktivitas, dan analitik performa kerja.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">📄</div>
-                        <h5>Laporan Excel & PDF</h5>
-                        <p>Ekspor data absensi, lembur, dan payroll dengan format profesional ke Excel atau PDF kapan saja.</p>
+                        <h5>Laporan Lengkap</h5>
+                        <p>Ekspor laporan penjualan, stok, absensi, dan payroll ke Excel/PDF.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-box">
                         <div class="icon">🛡</div>
-                        <h5>Anti-Spoof & Liveness Detection</h5>
-                        <p>Cegah kecurangan atau manipulasi absen menggunakan teknologi deteksi wajah asli secara langsung.</p>
+                        <h5>Aman & Stabil</h5>
+                        <p>Data tersimpan aman, aplikasi ringan dan stabil di berbagai perangkat.</p>
                     </div>
                 </div>
             </div>
@@ -664,121 +542,91 @@
     <!-- Harga Section -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="text-center mb-4">
+            <div class="text-center mb-5">
                 <span class="badge bg-success mb-2">PAKET HARGA</span>
-                <div class="pricing-title">
-                    <h1>Paket Absensi Wajah - Payroll</h1>
-                </div>
+                <h2 class="fw-bold text-dark">Pilih Paket yang Sesuai</h2>
             </div>
 
-            <div class="pricing-wrapper">
-                <!-- Bulanan -->
-                <div class="card-pricing">
-                    <div>
-                        <div class="badge-pricing badge-basic">Basic</div>
-                        <h2>Paket Bulanan</h2>
-                        <hr>
-                        <h3>Layanan Termasuk:</h3>
-                        <ul>
-                            <li><i class="bi bi-check-circle-fill"></i> Absensi Karyawan Tanpa Batas</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Face Recognition & Anti-Spoof</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Manajemen Shift & Lembur</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Integrasi Data & Payroll</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Ekspor Laporan Excel & PDF</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan</li>
-                        </ul>
-                    </div>
-                    <div>
+            <div class="row g-4 justify-content-center">
+                <!-- Paket Kasir -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="card-pricing">
+                        <div>
+                            <div class="badge-pricing badge-basic">Aplikasi Kasir</div>
+                            <h2 class="mt-3">Paket Kasir</h2>
+                            <hr>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> Transaksi & laporan penjualan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Stok multi satuan (unit faktor)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Manajemen produk & kategori</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Laporan stok real-time</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Dukungan pelanggan</li>
+                            </ul>
+                        </div>
                         <div class="price-box">
-                            <span>Harga</span>
-                            <h4>Rp15.000 <small>/ bulan</small></h4>
+                            <span class="text-muted small">Mulai dari</span>
+                            <h4>Hubungi Kami</h4>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tahunan -->
-                <div class="card-pricing dark">
-                    <div>
-                        <div class="badge-pricing badge-popular">Paling Populer ⭐</div>
-                        <h2>Paket Tahunan</h2>
-                        <hr>
-                        <h3>Layanan Termasuk:</h3>
-                        <ul>
-                            <li><i class="bi bi-check-circle-fill"></i> Semua Fitur Paket Bulanan</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Kalkulasi Lembur & Payroll Otomatis</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Dukungan Pelanggan Prioritas</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Laporan Performa Dua Mingguan</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Uji Coba Gratis 3 Hari</li>
-                        </ul>
-                    </div>
-                    <div>
+                <!-- Paket Absensi -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="card-pricing dark">
+                        <div>
+                            <div class="badge-pricing badge-popular">Paling Populer ⭐</div>
+                            <h2 class="mt-3">Absensi Wajah</h2>
+                            <hr>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> Face Recognition + Anti-Spoof</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Manajemen shift & lembur</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Integrasi payroll otomatis</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Mode offline & multi-cabang</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Laporan Excel & PDF</li>
+                            </ul>
+                        </div>
                         <div class="price-box">
-                            <span>Harga</span>
+                            <span class="text-muted small">Harga</span>
                             <h4>Rp149.000 <small>/ tahun</small></h4>
                         </div>
                     </div>
                 </div>
             </div>
 
-             <div class="text-center mt-4">
+            <div class="text-center mt-5">
                 <a href="https://play.google.com/store/apps/details?id=com.skeny.rai" class="btn-download">
-                    <i class="bi bi-google-play"></i> Unduh Sekarang
+                    <i class="bi bi-google-play"></i> Unduh Sekarang di Play Store
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Tentang Kami Section -->
+    <!-- Tentang Kami -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-card">
                 <div class="text-center mb-4">
                     <span class="badge bg-success mb-2">TENTANG KAMI</span>
-                    <h2 class="fw-bold">Absensi, Lembur & Payroll Lebih Cerdas dengan Teknologi</h2>
+                    <h2 class="fw-bold">Skeny Studio – Solusi Digital dari Jawa Tengah</h2>
                 </div>
-                <p class="lead text-muted text-center max-width-700 mx-auto mb-5">
-                    Absensi Wajah & Payroll adalah sistem pengelolaan kehadiran kerja digital yang berbasis di Central Java, Indonesia, dirancang untuk membantu perusahaan mencatat dan memantau absensi, mengelola jam lembur, serta menyederhanakan perhitungan payroll secara cepat, akurat, dan aman.
+                <p class="lead text-muted text-center mb-4">
+                    Kami mengembangkan aplikasi praktis untuk membantu UMKM dan perusahaan mengelola operasional sehari-hari. 
+                    Mulai dari sistem kasir dengan perhitungan stok multi-satuan, hingga absensi wajah berbasis AI yang terintegrasi dengan payroll.
                 </p>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="about-item">
-                            <i class="bi bi-person-check-fill"></i>
-                            <h5>Absensi Akurat</h5>
-                            <p>Fitur Face Recognition dengan Anti-Spoofing mencegah kecurangan manipulasi foto/absen palsu.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item">
-                            <i class="bi bi-clock-fill"></i>
-                            <h5>Manajemen Lembur</h5>
-                            <p>Pencatatan dan rekapitulasi jam lembur karyawan secara otomatis terhubung ke sistem rekap.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item">
-                            <i class="bi bi-cash-coin"></i>
-                            <h5>Integrasi Payroll</h5>
-                            <p>Mempermudah kalkulasi gaji bulanan berdasarkan data kehadiran dan lembur yang akurat.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="my-5">
                 <p class="text-center text-muted mb-0">
-                    <strong>Absensi Wajah - Payroll</strong> memadukan teknologi kecerdasan buatan, sinkronisasi cloud, manajemen shift, kalkulasi lembur, integrasi payroll, pelaporan data, serta analitik kehadiran ke dalam satu platform modern dari Central Java, Indonesia.
+                    Berbasis di <strong>Banyumas, Jawa Tengah</strong>, kami fokus membuat aplikasi yang ringan, mudah digunakan, dan benar-benar membantu pekerjaan menjadi lebih cepat.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Kontak Section -->
+    <!-- Kontak -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-card">
                 <h2 class="fw-bold mb-4 text-center">Hubungi Kami</h2>
                 <p class="mb-5 text-center">
-                    Punya pertanyaan seputar fitur lembur, integrasi payroll Absensi Wajah & Payroll, atau butuh bantuan teknis terkait akun Anda? Tim kami siap membantu.
+                    Butuh informasi tentang Aplikasi Kasir, Absensi Wajah, atau ingin konsultasi paket? Tim kami siap membantu.
                 </p>
 
                 <div class="row g-4">
@@ -794,13 +642,14 @@
                         <div>
                             <h5><i class="bi bi-clock-fill text-success me-2"></i> Jam Operasional</h5>
                             <p class="ps-4 mb-1">Senin – Jumat</p>
-                            <p class="ps-4">08:00 AM – 05:00 PM (WIB / GMT+7)</p>
+                            <p class="ps-4">08:00 – 17:00 WIB</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <h5><i class="bi bi-headset text-success me-2"></i> Layanan Bantuan</h5>
                         <p class="ps-4">
-                            Untuk info produk, bantuan teknis lembur dan payroll, peluang kemitraan, atau pertanyaan seputar tagihan paket, silakan hubungi kami via email. Kami akan merespon pesan Anda secepat mungkin pada jam kerja.
+                            Untuk pertanyaan produk, bantuan teknis, atau peluang kerja sama, silakan hubungi kami melalui email. 
+                            Kami akan merespon secepat mungkin pada jam kerja.
                         </p>
                     </div>
                 </div>
@@ -811,7 +660,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            Copyright © 2026 Absensi Wajah & Payroll. Banyumas, Jawa Tengah, Indonesia. All Rights Reserved.
+            Copyright © 2026 Skeny Studio. Banyumas, Jawa Tengah, Indonesia. All Rights Reserved.
         </div>
     </footer>
 
